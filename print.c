@@ -3,7 +3,7 @@
 
 void print(struct node *ll){
 	struct node *node=ll->next;//Set node to first node
-	while(node != MYNULL){//While not the end of the list
+	while(node != NULL){//While not the end of the list
 		printf("%d ", node->data);//Display data
 		node=node->next;//Move to next node in list
 	}

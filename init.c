@@ -2,7 +2,7 @@
 #include"PA2.h"
 
 struct node * init(){
-        struct node *sentinel=getNode();
+        struct node *sentinel=get_node();
 	sentinel->data=42;
 	sentinel->next=NULL;
 	return sentinel;

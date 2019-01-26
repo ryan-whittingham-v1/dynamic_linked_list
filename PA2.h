@@ -6,7 +6,7 @@ struct node {
 	struct node *next;
 };
 
-void init(struct node *);
+struct node * init();
 int add(struct node *, int);
 void print(struct node *);
 int delete(struct node *, int);

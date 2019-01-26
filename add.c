@@ -3,7 +3,8 @@
 
 int add(struct node *ll, int nodeData){
 	struct node *newNode=get_node();//get new node
-	int nodeIndex=ll->next;//Set node index to first node
+	struct node *nodeIndex=ll->next;//Set node index to first node
+	struct node *prevNode=ll;
 	if(newNode != NULL){//If space available
 		newNode->data=nodeData;//Assign user number to node
 		
@@ -13,8 +14,7 @@ int add(struct node *ll, int nodeData){
 			return 1;//Success
 		}
 		else{//List already contains data
-			struct node *prevNode=ll->next;
-			while(newNode->data > prevNode->data){//While new data is larger than existing data in list
+			while(newNode->data > nodeIndex->data){//While new data is larger than existing data in list
 				prevNode=nodeIndex;//Previous node holds previous index value
 				nodeIndex=nodeIndex->next;//Set node index to next node
 				if(nodeIndex == NULL){//If next index points to end of list, new node data is largest in the list

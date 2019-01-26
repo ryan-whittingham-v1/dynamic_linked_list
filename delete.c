@@ -2,8 +2,8 @@
 #include"PA2.h"
 
 int delete(struct node *ll, int nodeData){
-	int nodeIndex=ll->next;
-	int prevNode=ll;
+	struct node *nodeIndex=ll->next;
+	struct node *prevNode=ll;
 	while(nodeIndex!=NULL){//While not the end of the list
 		if(nodeIndex->data==nodeData){//Data is in the list
 			prevNode->next=nodeIndex->next;//Set previous node to point to where deleted node was

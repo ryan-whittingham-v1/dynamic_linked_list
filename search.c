@@ -2,7 +2,7 @@
 #include"PA2.h"
 
 int search(struct node *ll, int userData){
-	int nodeIndex=ll->next;//Set node index to first node
+	struct node *nodeIndex=ll->next;//Set node index to first node
 	while(nodeIndex != NULL){//While not the end of the list
 		if(nodeIndex->data == userData){//Check if user data matches current node data
 			return 1;//Success
