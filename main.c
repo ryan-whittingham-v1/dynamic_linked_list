@@ -1,27 +1,29 @@
 #include<stdio.h>
-#include"PA1.h"
+#include"PA2.h"
 
 /* 
 Ryan Whittingham
 CSE 222
-January 13, 2019
-Programming Assignment 1
+January 25, 2019
+Programming Assignment 2
 
 -----------------------------------------------
-PA1 is a C program that allows the user to interface 
-with a linked list to store, sort, delete, search and
-print data in the list through simple commands. 
+PA2 is a C program that allows the user to interface 
+with a dynamically allocated linked list to store, 
+sort, delete, search and print data in the list 
+through simple commands. 
 -----------------------------------------------
 */
 
 int main(void){
-	struct node list[100];
 	char buffer[100];
 	char userLetter[100];
 	int userNum;
 	int ret;
-
-	init(list);
+	struct node *list;
+	
+	list=init();
+	
 	while(1 == 1){
 		printf(">");//Display prompt for user input
 		fgets(buffer, 100, stdin);//Capture user input
