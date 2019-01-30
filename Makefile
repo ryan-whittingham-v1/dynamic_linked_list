@@ -1,5 +1,5 @@
-main: main.o init.o print.o add.o delete.o showOptions.o search.o release_node.o get_node.o
-	gcc -o main main.o init.o print.o add.o delete.o showOptions.o search.o release_node.o get_node.o
+main: main.o init.o print.o add.o delete.o showOptions.o search.o release_node.o get_node.o freeMem.o
+	gcc -o main main.o init.o print.o add.o delete.o showOptions.o search.o release_node.o get_node.o freeMem.o
 main.o: main.c PA2.h
 	gcc -c main.c
 init.o: init.c PA2.h
@@ -18,6 +18,8 @@ release_node.o: release_node.c PA2.h
 	gcc -c release_node.c
 get_node.o: get_node.c PA2.h
 	gcc -c get_node.c
+freeMem.o: freeMem.c PA2.h
+	gcc -c freeMem.c
 clean: 
-	rm main main.o init.o print.o add.o delete.o showOptions.o search.o release_node.o get_node.o
+	rm main main.o init.o print.o add.o delete.o showOptions.o search.o release_node.o get_node.o freeMem.o
 

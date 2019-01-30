@@ -2,9 +2,9 @@
 #include"PA2.h"
 
 int add(struct node *ll, int nodeData){
-	struct node *newNode=get_node();//get new node
-	struct node *nodeIndex=ll->next;//Set node index to first node
-	struct node *prevNode=ll;
+	struct node *newNode=get_node();//Allocate memmory for a new node and assign address to newNode
+	struct node *nodeIndex=ll->next;//Set nodeIndex to first node in list
+	struct node *prevNode=ll;//Set prevNode to the sentinel
 	if(newNode != NULL){//If space available
 		newNode->data=nodeData;//Assign user number to node
 		
@@ -24,6 +24,7 @@ int add(struct node *ll, int nodeData){
 				}
 			}
 			if(newNode->data==nodeIndex->data){//If data already in list
+				release_node(newNode);//Free node memmory
 				return 0;//Fail
 			}
 			else{

@@ -7,7 +7,7 @@ int search(struct node *ll, int userData){
 		if(nodeIndex->data == userData){//Check if user data matches current node data
 			return 1;//Success
 		}
-		nodeIndex=nodeIndex->next;//Set index to next node
+		nodeIndex=nodeIndex->next;//Update nodeIndex for while loop
 	}
 	return 0;//Fail
 }
